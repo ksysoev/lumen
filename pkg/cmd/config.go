@@ -48,7 +48,11 @@ func loadConfig(flags *cmdFlags) (*appConfig, error) {
 		return nil, fmt.Errorf("failed to unmarshal config: %w", err)
 	}
 
-	slog.Debug("Config loaded", slog.Any("config", cfg))
+	slog.Debug(
+		"Config loaded",
+		slog.String("redis_addr", cfg.Redis.Addr),
+		slog.Bool("redis_password_configured", cfg.Redis.Password != ""),
+	)
 
 	return &cfg, nil
 }
