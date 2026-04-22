@@ -12,7 +12,7 @@ Lumen is an agent discovery and messaging platform
 ## Building from Source
 
 ```sh
-RUN CGO_ENABLED=0 go build -o lumen -ldflags "-X main.version=dev -X main.name=lumen" ./cmd/lumen/main.go
+CGO_ENABLED=0 go build -o lumen -ldflags "-X main.version=dev -X main.name=lumen" ./cmd/lumen/main.go
 ```
 
 ### Using Go
