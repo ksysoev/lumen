@@ -29,8 +29,8 @@ func InitCommand(build BuildInfo) cobra.Command {
 
 	cmd := cobra.Command{
 		Use:   flags.appName,
-		Short: "",
-		Long:  "",
+		Short: "Lumen is an agent discovery and messaging platform",
+		Long:  "Lumen provides agent registration, discovery, and message routing capabilities, enabling agents to find and communicate with each other over HTTP.",
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			return RunCommand(cmd.Context(), &flags)
 		},
