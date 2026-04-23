@@ -7,6 +7,10 @@
 
 Lumen is an agent discovery and messaging platform
 
+## Architecture Decisions
+
+- `docs/adr/0001-v1-agent-discovery-messaging.md`: v1 API contract, Redis data model, and delivery guarantees
+
 ## Installation
 
 ## Building from Source
