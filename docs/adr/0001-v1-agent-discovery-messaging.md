@@ -138,6 +138,8 @@ Query defaults and limits:
 - `count`: default `1`, max `100`
 - `block_ms`: default `30000`, max `60000`
 
+Implementation note: the API server must set HTTP `WriteTimeout` greater than `block_ms` (with additional buffer for processing and serialization). The current scaffold in `pkg/api/api.go` uses a 5s write timeout, so timeout configuration must be expanded before enabling this consume contract in runtime.
+
 Response (`200 OK`):
 
 ```json
